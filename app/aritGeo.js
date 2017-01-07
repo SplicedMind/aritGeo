@@ -1,32 +1,45 @@
 module.exports = {
  
- computeAverage: function(num1,num2,num3) {
-   var average = 0;
-   average = ((num1 + num2 + num3)/3);
-   return average;
- },
- 
- computeFactorial: function(num) {
-   var factorial = 1;
-   var i = 1;
-   while (i <= num)
+ aritGeo: function(aray) {
+   
+   if(aray instanceof Array)
    {
-   	factorial = factorial * i;
-   	i = i + 1;
+      var result;
+
+      if(aray.length == 0)
+      {
+         result = 0;
+
+      }
+      else
+      {
+         var arit = aray[1] - aray[0];
+         var geo = aray[1]/aray[0];
+         var i = 0;
+         while(i < aray.length -1)
+         {
+            if(aray[i + 1]/aray[i] == geo)
+            {
+               result = 'Geometric';
+               i += 1
+               continue;
+            }
+            else if(aray[i + 1] - aray[i] == arit)
+            {
+               result = 'Arithmetic';
+               i += 1
+               continue;
+            }
+            else
+            {
+               result = -1;
+               break;
+            }
+
+         }                     
+      }
+      return result;
    }
-   return factorial; 
- },
-
- convertTempCtoF: function(cTemp) {
-   var fTemp = 0;
-   fTemp = (cTemp * (9/5) + 32);
-   return fTemp; 
- },
-
- convertTempFtoC: function(fTemp) {
-   var cTemp = 0;
-   cTemp = (fTemp - 32)/(9/5);
-   return cTemp; 
  }
 
 }
