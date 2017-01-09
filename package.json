@@ -1,24 +1,24 @@
 {
-  "name": "javascript-demo-project",
+  "name": "aritGeo",
   "version": "1.0.0",
   "description": "Basic JavaScript project for demonstration of programming concepts",
-  "main": "app/library.js",
+  "main": "app/aritGeo.js",
   "directories": {
     "test": "tests"
   },
   "scripts": {
-    "test": "mocha tests/tests.js"
+    "test": "jasmine tests/tests.js"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/Philipeano/javascript-demo-project.git"
+    "url": "git+https://github.com/SplicedMind/aritGeo.git"
   },
-  "author": "Philip Newman",
+  "author": "Akinbode Femi",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/Philipeano/javascript-demo-project/issues"
+    "url": "https://github.com/SplicedMind/aritGeo/issues"
   },
-  "homepage": "https://github.com/Philipeano/javascript-demo-project#readme",
+  "homepage": "https://github.com/SplicedMind/aritGeo#readme",
   "devDependencies": {
     "jasmine": "^2.5.2"
   }
